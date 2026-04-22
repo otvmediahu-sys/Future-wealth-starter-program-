@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Future Wealth Starter Program</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f4f6f9;
+  color: #222;
+}
+
+/* NAVBAR */
+.nav {
+  background: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+}
+
+.nav h1 {
+  font-size: 18px;
+  color: #0b1b3a;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(rgba(11,27,58,0.7), rgba(11,27,58,0.7)),
+  url('https://images.unsplash.com/photo-1588072432836-e10032774350');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h2 {
+  font-size: 40px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.btn {
+  background: #00c853;
+  color: white;
+  padding: 14px 22px;
+  border-radius: 8px;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+/* SECTION */
+.section {
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section h2 {
+  color: #0b1b3a;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* CARD */
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card p {
+  padding: 15px;
+}
+
+/* VIDEO */
+video {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* FORM */
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* DISCLAIMER */
+.disclaimer {
+  font-size: 13px;
+  color: #555;
+  background: #eee;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* WHATSAPP */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 15px;
+  border-radius: 50px;
+  text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<div class="nav">
+  <h1>Future Wealth Starter Program</h1>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <h2>Building Financially Smart Learners</h2>
+  <p>School-Based Financial Literacy & Life Skills Program</p>
+  <button class="btn" onclick="document.getElementById('lead').scrollIntoView()">Join Program</button>
+</div>
+
+<!-- ABOUT -->
+<div class="section">
+  <h2>About the Program</h2>
+  <p>
+    The Future Wealth Starter Program helps children understand money, saving,
+    and responsible decision-making from an early age through structured
+    school-based learning.
+  </p>
+</div>
+
+<!-- BENEFITS -->
+<div class="section">
+  <h2>Benefits for Learners</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1606326608606-aa0b62935f2b">
+      <p>Builds early understanding of money and value</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1584697964403-1d3b3bb9b7e6">
+      <p>Encourages saving habits and discipline</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754">
+      <p>Improves decision-making skills</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- VIDEO -->
+<div class="section">
+  <h2>Program Overview</h2>
+
+  <video controls>
+    <source src="https://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4">
+  </video>
+
+  <p>This video explains how the program works in schools.</p>
+</div>
+
+<!-- HOW -->
+<div class="section">
+  <h2>How It Works</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1588072432836-e10032774350">
+      <p>Structured classroom learning sessions</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1">
+      <p>Workbook-based activities for learners</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238">
+      <p>Parent involvement through home learning</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- FORM -->
+<div class="section" id="lead">
+  <h2>Parent Registration</h2>
+
+  <form onsubmit="submitForm(event)">
+    <input type="text" placeholder="Parent Name" required>
+    <input type="tel" placeholder="Phone Number" required>
+
+    <select>
+      <option>General Interest</option>
+      <option>Child Support</option>
+      <option>Family Learning</option>
+    </select>
+
+    <label>
+      <input type="checkbox" required>
+      I consent to be contacted about the program
+    </label>
+
+    <button class="btn">Submit</button>
+  </form>
+
+  <p id="msg"></p>
+</div>
+
+<!-- DISCLAIMER -->
+<div class="section disclaimer">
+  <p>
+    This program is an educational initiative. It does not provide financial advice,
+    does not handle money, and participation is voluntary under POPIA compliance.
+  </p>
+</div>
+
+<!-- WHATSAPP -->
+<a class="whatsapp"
+href="https://wa.me/27799172717?text=Hi%20I%20want%20to%20join%20Future%20Wealth%20Program"
+target="_blank">
+💬
+</a>
+
+<script>
+function submitForm(e){
+  e.preventDefault();
+  document.getElementById("msg").innerText = "Thank you! We will contact you soon.";
+}
+</script>
+
+</body>
+  </html>
